@@ -1,0 +1,89 @@
+body {
+    background-color: black;
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    grid-template-areas: "navibar   main";
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    color: pink;
+    background-color: purple;
+}
+
+#main-container {
+    display: grid;
+    height: 40%;
+    width: 30%;
+    background-color: white;
+    justify-content: center;
+    row-gap: 0.1rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+
+nav {
+    height: 100vh;
+    grid-area: navibar;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    column-gap: 100px;
+    text-align: center;
+}
+
+main {
+    background-color: white;
+}
+
+.text-container {
+    font-family: Calibri;
+    border: double cyan 3px;
+    color: cyan;
+    margin-left: 60px;
+    padding: 10px;
+    font-size: 20px;
+    width: 50vh;
+
+}
+
+li {
+    background-color: fuchsia;
+    border: double cyan 3px;
+    margin-bottom: 10px;
+    margin-left: 4px;
+    height: 40px;
+    align-content: center;
+    text-indent: 10px;
+}
+
+ul.a {
+    list-style-type: square;
+    color: cyan;
+    position: relative;
+}
+
+div {
+    font-family: Arial;
+    width: 100%;
+    font-size: 40px;
+    margin: 1px;
+    background-color: rgba(133, 7, 7, 0.952); 
+}
+
+
+a:link {
+    text-decoration: none;
+    width:100%;
+    color: lightgreen;
+}
+
+a:hover {
+    background-color: teal;
+    color:blue;
+}
+
+a:active {
+    color: green;
+}

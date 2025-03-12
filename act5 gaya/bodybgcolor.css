@@ -1,0 +1,51 @@
+h1 {
+    background-color: green;
+}
+
+div {
+    background-color: lightblue;
+    opacity: 0.4;
+    background: rgba(0, 128, 128, 0.6);
+}
+
+p {
+    background-color: yellow;
+}
+
+body {
+    background-image: url("./pic/beenie.jpg");
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+      background-attachment: scroll; 
+      background-size: cover;
+      background-position: center center;
+}
+
+a:link{
+    color: violet;
+}
+
+a:hover{
+    color: blue;
+}
+
+a:active{
+    color: #b4dd1e;
+}
+
+ul.a {
+    list-style-type: circle;
+}
+
+ul.b {
+    list-style-type: square;
+}
+
+ol.c {
+    list-style-type: upper-roman;
+}
+
+ol.d {
+    list-style-type: lower-alpha;
+}

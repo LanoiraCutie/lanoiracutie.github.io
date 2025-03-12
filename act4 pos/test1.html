@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+
+<body>
+    <a href="test2.html" target="_blank" class="image-link">
+        <img src="./pics/bini_pic3.jpg" alt="Image" class="toggle-image" data-alt="./pics/bloom.jpg">
+    </a>
+
+    <a href="test3.html" target="_blank" class="image-link">
+        <img src="./pics/bini_pic3.jpg" alt="Image" class="toggle-image" data-alt="./pics/bloom.jpg">
+    </a>
+    <script>
+        document.querySelectorAll(".image-link").forEach(link => {
+            link.addEventListener("click", function(event) {
+                let newTab = window.open(this.href, "_blank"); // Open unique page
+
+                if (newTab) {
+                    event.preventDefault(); // Prevent default only if the new tab opens
+                }
+
+                let img = this.querySelector(".toggle-image");
+                let currentSrc = img.src;
+                let altSrc = img.getAttribute("data-alt");
+
+                img.src = altSrc;
+                img.setAttribute("data-alt", currentSrc); // Swap back on next click
+            });
+        });
+    </script>
+</body>
+
+</html>

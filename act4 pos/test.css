@@ -1,0 +1,7 @@
+input[type="checkbox"] {
+    content: url("./pics/logo.jpg")
+}
+
+input[type="checkbox"]:checked {
+    content: url("./pics/bloom.jpg")
+}
