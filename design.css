@@ -71,7 +71,7 @@ html {
     border-radius: 1rem;
     position:relative;
     top: 50%;
-    transform: translateY(-40%) scale(0.98); /* slightly lower than centered */
+    transform: translateY(-40%) scale(0.98);
     transition: all 1s ease;
     text-align: center;
     margin: 0 auto;
@@ -106,7 +106,7 @@ html {
     max-width: 90%;
     position:relative;
     top: 50%;
-    transform: translateY(-40%) scale(0.98); /* slightly lower than centered */
+    transform: translateY(-40%) scale(0.98);
     transition: all 1s ease;
     border-radius: 1rem;
     text-align: center;
@@ -234,7 +234,7 @@ html {
     max-width: 50%;
     position: relative;
     top: 50%;
-    transform: translateY(40%) scale(0.98); /* slightly lower than centered */
+    transform: translateY(40%) scale(0.98); 
     transition: all 1s ease;
     border-radius: 1rem;
     text-align: center;

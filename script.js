@@ -10,21 +10,17 @@ function showSection(index) {
     const newSection = sections[index];
     const oldSection = sections[currentSectionIndex];
 
-    // Add "visible" so it's interactable
     newSection.classList.add('visible');
     newSection.style.backgroundImage = `url('${newSection.getAttribute('data-bg')}')`;
-
-    // Start fade in
+    
     newSection.classList.add('active');
 
-    // Fade out old section
     if (oldSection && oldSection !== newSection) {
         oldSection.classList.remove('active');
 
-        // After fade out, send it behind
         setTimeout(() => {
             oldSection.classList.remove('visible');
-        }, 1000); // match transition duration
+        }, 1000); 
     }
 
     currentSectionIndex = index;
@@ -49,7 +45,6 @@ window.addEventListener('wheel', handleWheelScroll);
 window.addEventListener('DOMContentLoaded', () => {
     showSection(0);
 
-    // --- SLIDER LOGIC START ---
     const slider = document.querySelector('.seatwork-slide');
     const slides = document.querySelectorAll('.seatwork-hl-container');
     const dots = document.querySelectorAll('.sliders');
@@ -61,18 +56,16 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     function scrollToSlide(index) {
-        const slideWidth = slides[0].offsetWidth + 30; // includes the gap/margin
+        const slideWidth = slides[0].offsetWidth + 30;
         slider.scrollTo({ left: slideWidth * index, behavior: 'smooth' });
         currentSlideIndex = index;
         updateIndicators(index);
     }
 
-    // Clickable dots
     dots.forEach((dot, i) => {
         dot.addEventListener('click', () => scrollToSlide(i));
     });
 
-    // Prev/Next buttons
     document.querySelector('.prev-btn').addEventListener('click', () => {
         if (currentSlideIndex > 0) scrollToSlide(currentSlideIndex - 1);
     });
@@ -80,5 +73,4 @@ window.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.next-btn').addEventListener('click', () => {
         if (currentSlideIndex < slides.length - 1) scrollToSlide(currentSlideIndex + 1);
     });
-    // --- SLIDER LOGIC END ---
 });
